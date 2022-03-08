@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Hero {
-    private int id = 1;
+    private int id;
     private String name;
     private Integer age;
     private String specialPower;
@@ -9,7 +9,7 @@ public class Hero {
     private static ArrayList<Hero> instance = new ArrayList<>();
 
     public Hero(int id,String name, Integer age, String specialPower,String weakness ) {
-        this.id = id ++;
+        this.id = id+1;
         this.name = name;
         this.age = age;
         this.specialPower = specialPower;

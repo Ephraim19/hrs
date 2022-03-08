@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Squad {
-    private Integer maxSize = 0;
+    private Integer maxSize;
     private String name;
     private  String dedicatedCause;
     private Hero heroSquad;
@@ -34,9 +34,7 @@ public class Squad {
     public static ArrayList<Squad> getAllData(){
         return instance;
     }
-    public static boolean getSize() {
-        return true;
-    }
+
     public static void clearAllSquads(){
         instance.clear();
     }

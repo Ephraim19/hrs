@@ -1,4 +1,4 @@
-//import Squad;
+
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static spark.Spark.*;
-//import Hero;
+
 public class App {
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
@@ -31,9 +31,7 @@ public class App {
 
             ArrayList mySquad = Squad.getAllData();
             model.put("squad",mySquad);
-            System.out.println(mySquad);
-            boolean len = Squad.getSize();
-            String sessionData = request.session().attribute("user");
+            //String sessionData = request.session().attribute("user");
             return new ModelAndView(model,"index.hbs");
         },new HandlebarsTemplateEngine());
 
@@ -48,7 +46,7 @@ public class App {
             Hero hero = new Hero(1,name,myAge,power,weakness);
             String squad = request.queryParams("squad");
             if (squad.equals("squadA")){
-                Squad squad1 = new Squad(3,"The Fighters","Fighting crime",hero);
+                Squad squad1 = new Squad(2,"The Fighters","Fighting crime",hero);
             } else if(squad.equals("squadB")){
                 Squad squad1 = new Squad(3,"The winners","Helping the needy",hero);
             }else if(squad.equals("squadC")){
@@ -69,7 +67,6 @@ public class App {
             response.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
-
 
     }
 }
