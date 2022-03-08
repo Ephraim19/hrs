@@ -4,13 +4,8 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-//sourceCompatibility = 11.0
+sourceCompatibility = 11.0
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
 
 repositories {
     mavenCentral()
