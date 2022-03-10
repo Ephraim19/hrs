@@ -17,6 +17,9 @@ public class Hero {
 
         instance.add(this);
     }
+    public static Integer size(){
+        return instance.size();
+    }
     public static ArrayList<Hero> getAll(){
         return instance;
     }
